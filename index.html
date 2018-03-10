@@ -1,78 +1,161 @@
-<html lang="zh-cmn-hans">
+<!DOCTYPE html>
+<html lang="zh-CN">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
-<title>正在打开支付宝，请稍候……</title>
+    <meta charset="UTF-8">
+    <title>杨茂新 - 个人简历</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
+
 <body>
-<script>
-var _0 = "https://qr.alipay.com/c1x00019hzmnm548ivt1f12";
-var _1 = "https://qr.alipay.com/c1x00019hzmnm548ivt1f12";
-function is_weixin() {
-if (/MicroMessenger/i.test(navigator.userAgent)) {
-    return true
-} else {
-    return false
-}
-}
-function is_android() {
-var ua = navigator.userAgent.toLowerCase();
-if (ua.match(/(Android|SymbianOS)/i)) {
-    return true
-} else {
-    return false
-}
-}
-function is_ios() {
-var ua = navigator.userAgent.toLowerCase();
-if (/iphone|ipad|ipod/.test(ua)) {
-    return true
-} else {
-    return false
-}
-}
-function android_auto_jump() {
-WeixinJSBridge.invoke("jumpToInstallUrl", {}, function(e) {});
-window.close();
-WeixinJSBridge.call("closeWindow")
-}
-function ios_auto_jump() {
-if (_0 != "") {
-    location.href = _0
-} else {
-    window.close();
-    WeixinJSBridge.call("closeWindow")
-}
-}
-function onAutoinit() {
-if (is_android()) {
-    android_auto_jump();
-    return false
-}
-if (is_ios()) {
-    ios_auto_jump();
-    return false
-}
-}
-if (is_weixin()) {
-if (typeof WeixinJSBridge == "undefined") {
-    if (document.addEventListener) {
-        document.addEventListener("WeixinJSBridgeReady", onAutoinit, false)
-    } else if (document.attachEvent) {
-        document.attachEvent("WeixinJSBridgeReady", onAutoinit);
-        document.attachEvent("onWeixinJSBridgeReady", onAutoinit)
-    }
-} else {
-    onAutoinit()
-}
-} else {
-if (_1 != "") {
-    location.href = _1
-} else {
-    window.close()
-}
-}
-</script>
+    <div class="container">
+        <main>
+            <header>
+                <section class="title">
+                    <h1>杨茂新</h1>
+                    <p>Web前端开发</p>
+                </section>
+                <address>
+                    <ul class="contact">
+                        <li><span>电话：</span>150-2206-6862</li>
+                        <li><span>邮箱：</span><a href="mailto://ymx0107@gmail.com">ymx0107@gmail.com</a></li>
+                        <li><span>个人主页：</span><a href="https://moxinn.com/ ">https://moxinn.com/ /</a></li>
+                        <li><span>Github：</span><a href="https://github.com/yangmaoxin/">https://github.com/yangmaoxin/</a></li>
+                    </ul>
+                </address>
+            </header>
+            <article class="content">
+                <article>
+                    <section class="education">
+                        <h2>教育经历</h2>
+                        <ul>
+                            <li>
+                                <div class="edu-placeholder"></div>
+                            </li>
+                            <li><span class="edu-year">2013 - 2015</span><span class="edu-circle circle"></span><span class="edu-title">本科</span></li>
+                            <li class="edu-content">天津工业大学  软件工程</li>
+                            <li>
+                                <div class="edu-placeholder"></div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="project">
+                        <h2>项目经验</h2>
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dd>2018.1 - 2018.3<span>团队项目</span></dd>
+                                    <dt><span class="circle"></span>智能共享柜锁 — 微信小程序</dt>
+                                    <dd><span class="key-point">微信小程序</span>
+                                        <span class="key-point">WXML</span>
+                                        <span class="key-point">WXSS</span>
+                                    <dd>
+                                        <ul>
+                                            <li>基于小程序，远程和蓝牙开启智能锁，并计费结算以及报修</li>
+                                            <li>基于微信小程序MINA框架的WXML、WXSS</li>
+                                            <li>视图层采用Flex弹性布局，逻辑层采用模块化的开发</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dd>2017.9 - 2017.12<span>团队项目</span></dd>
+                                    <dt><span class="circle"></span>公交物资管理系统 — 后台管理系统</dt>
+                                    <dd><span class="key-point">Layui</span>
+                                        <span class="key-point">jQuery</span>
+                                        <span class="key-point">EasyUI</span>
+                                    <dd>
+                                        <ul>
+                                            <li>本项目是一个后台管理系统</li>
+                                            <li>一期前端框架使用EasyUI，二期使用Layui重构代码</li>
+                                            <li>负责页面的布局和数据渲染，并且完成后端页面的嵌套</li>
+                                            <li>最大的困难是项目没有完全实现前后端分离</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dd>2015.8 - 2016.11<span>团队项目</span></dd>
+                                    <dt><span class="circle"></span>乐此购 — 购物商城网站</dt>
+                                    <dd><span class="key-point">jQuery</span>
+                                    <dd>
+                                        <ul>
+                                            <li>为推广公司产品，制作一个大型网站商城，前期以PC端为主，二期完成手机端页面的开发</li>
+                                            <li>负责前期界面的研究，切图，配合后台开发人员设计界面与开发功能，并负责框架开发，封装公共组件，以及根据需要引进第三方插件</li>
+                                            <li>最大困难是实现产品前端界面效果与设计图纸在某些界面上难以绝对统一</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </section>
+                </article>
+                <article>
+                    <section class="project">
+                            <h2>工作经历</h2>
+                            <ul>
+                                <li>
+                                    <dl>
+                                        <dd>2017.5 - 至今<span>前端开发</span></dd>
+                                        <dt><span class="circle"></span>天津杰出科技发展有限公司</dt>
+                                        <dd>
+                                            <ul>
+                                                <li>负责与客户对接开发需求、并参与项目的研发及维护</li>
+                                                <li>负责公司现有项目和新项目的前端修改调试和开发工作</li>
+                                                <li>推进公司项目开发的前后端分离</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dd>2017.1 - 2017.4<span>前端开发</span></dd>
+                                        <dt><span class="circle"></span>天津九运初科技有限公司</dt>
+                                        <dd>
+                                            <ul>
+                                                <li>公司官网前端界面更新及维护，使其达到更好的视觉体验和用户体验</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dd>2015.6 - 2016.11<span>前端开发</span></dd>
+                                        <dt><span class="circle"></span>天津德沃赛国际贸易有限公司</dt>
+                                        <dd>
+                                            <ul>
+                                                <li>完成乐此购商城整站的前端开发，并兼容至IE8，上线后不断的维护与优化</li>
+                                                <li>负责公司网站PC端及移动端的多个活动页面的前端开发</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </section>
+                    <section class="skill">
+                        <h2>技能</h2>
+                        <dl class="skill-item">
+                            <dt>Web前端</dt>
+                            <dd>熟练使用合理的结构和样式编写兼容主流浏览器的页面</dd>
+                            <dd>能适当运用<strong>CSS3</strong>使页面在现代浏览器上效果更佳</dd>
+                            <dd>熟练运用<strong>AJAX</strong>实现异步数据传递，熟悉<strong>JSON</strong>等数据交换格式</dd>
+                            <dd>熟练使用常用<strong>JavaScript</strong>库，如<strong>jQuery</strong>/<strong>zepto</strong></dd>
+                            <dd>能使用<strong>Bootstra</strong>/<strong>WeUI</strong>/<strong>Layui</strong>等前端样式库和框架进行开发</dd>
+                            <dd>能运用模块化/面向对象的方式编程</dd>
+                            <dd>使用 <strong>Vue.js</strong> 编写过简单的SPA</dd>
+                            <dd>使用 <strong>Sass</strong>/<strong>ejs</strong> 开发Hexo主题</dd>
+                            <dd>熟练使用<strong>Gulp</strong>对代码进行压缩合并；熟悉使用<strong>Git</strong>/<strong>SVN</strong>进行代码管理和版本控制</dd>
+                        </dl>
+                    </section>
+                </article>
+            </article>
+        </main>
+        <footer>© 2017 - 2018 Moxinn; <a href="doc/resume.pdf">Dowmload PDF version</a></footer>
+    </div>
 </body>
+
 </html>
